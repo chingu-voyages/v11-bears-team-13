@@ -21,13 +21,11 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
-  "rules": {
-    "quotes": [2, "single", { "avoidEscape": true }],
+  "rules": {     
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "es5",
-        "singleQuote": true,
+        "trailingComma": "es5",         
         "printWidth": 120,
         "semi": true
       }
