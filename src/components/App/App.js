@@ -1,17 +1,15 @@
 import React from "react";
-import { Jumbotron } from "reactstrap";
 import Footer from "../Footer/Footer";
+import Home from "../Home/Home";
 import "./App.css";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Jumbotron>
-          <header className="App-header"></header>
-        </Jumbotron>
+        <Home />
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
