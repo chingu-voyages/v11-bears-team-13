@@ -6,7 +6,6 @@
 
 .footer-section {
   display: flex;
-  background-color: grey;
 }
 .footer-section > div {
   flex: 1;

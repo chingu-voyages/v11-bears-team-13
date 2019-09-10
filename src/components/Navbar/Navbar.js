@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, withRouter } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -15,7 +16,7 @@ import {
   DropdownItem
 } from "reactstrap";
 
-export default class Menubar extends React.Component {
+class Menubar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -42,7 +43,7 @@ export default class Menubar extends React.Component {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <Link to="/">Home</Link>
               </NavItem>
               <NavItem>
                 <NavLink href="/components/">Beaches</NavLink>
@@ -51,12 +52,7 @@ export default class Menubar extends React.Component {
                 <NavLink href="/components/">Hiking</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  Popular Places
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/components/">Contact</NavLink>
+                <Link to="/Place">Popular Places</Link>
               </NavItem>
               <form className="form-inline my-2 my-lg-0">
                 <input
@@ -78,6 +74,7 @@ export default class Menubar extends React.Component {
                   <DropdownItem>Reset</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <p style={{ fontSize: "15px" }}>30&#8451; Mauritius</p>
               {/* <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.2em" }} /> */}
             </Nav>
           </Collapse>
@@ -86,3 +83,4 @@ export default class Menubar extends React.Component {
     );
   }
 }
+export default withRouter(Menubar);
