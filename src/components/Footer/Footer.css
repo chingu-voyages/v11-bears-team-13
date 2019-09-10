@@ -1,0 +1,16 @@
+.footer {
+  background-color: #3c4a3e;
+  padding: 15px;
+  color: #fff;
+}
+
+.footer-section {
+  display: flex;
+  background-color: grey;
+}
+.footer-section > div {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+}
