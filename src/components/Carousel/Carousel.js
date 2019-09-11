@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import image1 from "../../images/slide1.jpg";
-import image2 from "../../images/slide2.jpg";
-import image3 from "../../images/slide3.jpg";
 import {
   Container,
   Carousel,
@@ -10,6 +7,10 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
+import image1 from "../../images/slide1.jpg";
+import image2 from "../../images/slide2.jpg";
+import image3 from "../../images/slide3.jpg";
+import "./Carousel.css";
 
 const items = [
   {
@@ -49,20 +50,16 @@ class Slider extends Component {
   }
 
   next() {
+    const { activeIndex } = this.state;
     if (this.animating) return;
-    const nextIndex =
-      this.state.activeIndex === items.length - 1
-        ? 0
-        : this.state.activeIndex + 1;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
+    const { activeIndex } = this.state;
     if (this.animating) return;
-    const nextIndex =
-      this.state.activeIndex === 0
-        ? items.length - 1
-        : this.state.activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
@@ -76,6 +73,7 @@ class Slider extends Component {
 
     const slides = items.map(item => {
       return (
+        // <div className="carousel">
         <CarouselItem onExiting={this.onExiting} onExited={this.onExited}>
           <img className="img-fluid" src={item.src} alt={item.altText} />
           <CarouselCaption
@@ -83,6 +81,7 @@ class Slider extends Component {
             captionHeader={item.caption}
           />
         </CarouselItem>
+        // </div>
       );
     });
 
