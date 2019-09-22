@@ -7,7 +7,6 @@
   margin-top: 20px;
 }
 
-.place-container {
-  display: flex;
-  justify-content: center;
+.place-container > div {
+  display: inline-block;
 }
