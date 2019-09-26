@@ -1,6 +1,5 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link, withRouter } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -8,14 +7,16 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun } from "@fortawesome/fontawesome-free-solid";
+import "./Navbar.css";
 
-export default class Menubar extends React.Component {
+class Menubar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -37,48 +38,73 @@ export default class Menubar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Mauritius</NavbarBrand>
+          <NavbarBrand href="/">
+            <h2 className="logo">
+              <span
+                role="img"
+                aria-label="palm tree"
+                className="palm-tree-icon"
+              >
+                &#x1F334;
+              </span>
+              <span className="logo-first-letter letter-t">T</span>
+              <span>raverse</span>
+              &nbsp;
+              <span className="logo-first-letter letter-m">M</span>
+              <span>auritius</span>
+            </h2>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+              <NavItem active>
+                <Link to="/">Home</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Beaches</NavLink>
+                <Link to="/beaches/">Beaches</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Hiking</NavLink>
+                <Link to="/hiking/">Hiking Trails</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  Popular Places
-                </NavLink>
+                <Link to="/place">Popular Places</Link>
               </NavItem>
-              <NavItem>
-                <NavLink href="/components/">Contact</NavLink>
-              </NavItem>
-              <form className="form-inline my-2 my-lg-0">
-                <input
-                  className="form-control mr-sm-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Language
+                  English
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>English</DropdownItem>
                   <DropdownItem>French</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
+                  <DropdownItem>Hindi</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {/* <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.2em" }} /> */}
+              <form className="form-inline mx-2 search-bar">
+                <label htmlFor="search">
+                  <input
+                    className="form-control"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    id="search"
+                  />
+                </label>
+              </form>
+              <div
+                style={{
+                  fontWeight: 800,
+                  color: "#2F4858",
+                  borderLeft: "1px solid #3C4A3E",
+                  paddingLeft: "0.5rem"
+                }}
+              >
+                <FontAwesomeIcon icon={faSun} style={{ color: "#E47600" }} />
+                <span style={{ fontSize: "16px", marginLeft: "0.3rem" }}>
+                  30
+                  <span style={{ fontSize: "0.8rem" }}> &#8451;</span>
+                </span>
+                <p style={{ fontSize: "0.8rem", margin: 0 }}>Mauritius</p>
+              </div>
             </Nav>
           </Collapse>
         </Navbar>
@@ -86,3 +112,4 @@ export default class Menubar extends React.Component {
     );
   }
 }
+export default withRouter(Menubar);
