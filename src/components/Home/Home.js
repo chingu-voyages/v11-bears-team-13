@@ -1,12 +1,16 @@
 import React from "react";
 import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
-import PopularPlaces from "../PopularPlaces/PopularPlaces";
+import PopularDestinations from "../PopularDestinations/PopularDestinations";
+import MauritiusInfo from "../MauritusInfo/MauritiusInfo";
+import GoogleMapPreview from "../GoogleMapPreview/GoogleMap";
 
 function Home() {
   return (
     <div className="home">
       <HeroImageSlider />
-      <PopularPlaces />
+      <PopularDestinations />
+      <MauritiusInfo />
+      <GoogleMapPreview />
     </div>
   );
 }
