@@ -1,9 +1,12 @@
 import React from "react";
+import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
+import PopularPlaces from "../PopularPlaces/PopularPlaces";
 
 function Home() {
   return (
     <div className="home">
-      <h2>Carousel</h2>
+      <HeroImageSlider />
+      <PopularPlaces />
     </div>
   );
 }
