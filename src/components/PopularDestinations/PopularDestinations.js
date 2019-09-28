@@ -1,13 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import ItemsCarousel from "react-items-carousel";
 import "./PopularDestinations.css";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardTitle,
-  CardGroup
-} from "reactstrap";
+import { Card, CardImg, CardImgOverlay, CardText, CardTitle } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/fontawesome-free-solid";
 import cardImg from "../../images/card.jpg";
@@ -32,6 +26,7 @@ const PopularPlace = () => {
 };
 
 const PopularPlaces = () => {
+  const [activeItemIndex, setActiveItemIndex] = useState(0);
   return (
     <div className="popular-destinations py-4">
       <h1>Popular Destinations</h1>
@@ -40,13 +35,37 @@ const PopularPlaces = () => {
           see all
         </a>
       </div>
-
-      <CardGroup className="d-flex justify-content-center">
-        <PopularPlace />
-        <PopularPlace />
-        <PopularPlace />
-        <PopularPlace />
-      </CardGroup>
+      <div style={{ padding: "0 60px", maxWidth: 1250, margin: "0 auto" }}>
+        <ItemsCarousel
+          gutter={15}
+          activePosition="center"
+          chevronWidth={60}
+          disableSwipe={false}
+          alwaysShowChevrons={false}
+          numberOfCards={4}
+          slidesToScroll={1}
+          outsideChevron
+          showSlither={false}
+          firstAndLastGutter={false}
+          activeItemIndex={activeItemIndex}
+          requestToChangeActive={value => setActiveItemIndex(value)}
+          rightChevron={">"}
+          leftChevron={"<"}
+        >
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+          <PopularPlace />
+        </ItemsCarousel>
+      </div>
     </div>
   );
 };
