@@ -22,7 +22,10 @@ function Footer() {
             </span>
             Traverse Mauritius
           </h4>
-          <p>Mauritius Travel Guide</p>
+          <p>
+            Mauritius Travel Guide, Mauritius, an Indian Ocean island nation, is
+            known for its beaches, lagoons and reefs
+          </p>
         </div>
 
         <div>

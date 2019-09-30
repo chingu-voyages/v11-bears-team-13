@@ -67,7 +67,7 @@ class Menubar extends React.Component {
                 <Link to="/hiking/">Hiking Trails</Link>
               </NavItem>
               <NavItem>
-                <Link to="/place">Popular Places</Link>
+                <Link to="/place">Destinations</Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
