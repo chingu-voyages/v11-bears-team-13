@@ -1,0 +1,34 @@
+.popular-destinations {
+  min-height: 50vh;
+}
+
+.popular-destinations h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.destinations-list > div {
+  display: inline-block;
+}
+
+.btn-heart {
+  color: rgba(255, 255, 255, 0.8);
+}
+.btn-heart:hover {
+  color: #ff0088;
+}
+
+.sc-ifAKCX {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00a9f6;
+}
+
+.sc-ifAKCX::before {
+  content: "";
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 169, 246, 0.2);
+  margin: -23px;
+}

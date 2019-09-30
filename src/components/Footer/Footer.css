@@ -5,9 +5,10 @@
 }
 
 .footer-container > div {
-  margin: 10px;
+  margin: 10px 20px;
   padding: 20px;
   display: inline-block;
+  max-width: 300px;
 }
 
 .footer-container > div p {

@@ -24,8 +24,7 @@
   "rules": {     
     "prettier/prettier": [
       "error",
-      {        
-        "printWidth": 120,
+      {                 
         "semi": true
       }
     ],
