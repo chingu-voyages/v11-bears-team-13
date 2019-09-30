@@ -1,0 +1,86 @@
+.carousel-item .img-fluid {
+  width: 100%;
+  min-height: 350px;
+  height: auto;
+}
+.carousel-indicators .active {
+  background-color: #00a9f6;
+  opacity: 1;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  z-index: 4;
+}
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+  cursor: pointer;
+}
+.carousel-caption {
+  top: 30%;
+  bottom: auto;
+}
+
+.img-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+.img-caption {
+  font-size: 1.3rem;
+  color: #f0fdf2;
+}
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 169, 246, 0.7);
+  width: 100%;
+  z-index: 2;
+}
+.img-slide-caption {
+  z-index: 4;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.explore-link {
+  text-align: center;
+  margin: 2rem 0;
+}
+.explore-link a {
+  position: relative;
+  z-index: 4;
+  border: 2px solid #00a9f6;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  color: #f0fdf2;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: rgba(0, 169, 246, 0.8);
+}
+.explore-link a:hover {
+  background-color: rgba(0, 169, 246, 1);
+  padding: 0.7rem 1.2rem;
+  transition: 0.1s all ease-in;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .img-slide-caption {
+    transform: none;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+  }
+  .img-title {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  .img-caption {
+    font-size: 1rem;
+    color: #f0fdf2;
+  }
+  .explore-link {
+    margin: 1rem 0;
+  }
+}
