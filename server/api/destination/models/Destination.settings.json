@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "destinations",
+  "info": {
+    "name": "destination",
+    "description": "Mauritius's Popular Travel Destinations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
