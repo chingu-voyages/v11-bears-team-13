@@ -518,6 +518,128 @@
           },
           "title": {
             "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string",
+            "maxLength": 250
+          },
+          "mainImage": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "public_id": {
+                "type": "string"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "imageCollection": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "public_id": {
+                  "type": "string"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "videoLink": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          },
+          "lattitude": {
+            "type": "string"
+          },
+          "article": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "beach",
+              "nationalPark",
+              "shopping"
+            ]
           }
         }
       },
@@ -525,6 +647,33 @@
         "properties": {
           "title": {
             "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string",
+            "maxLength": 250
+          },
+          "videoLink": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          },
+          "lattitude": {
+            "type": "string"
+          },
+          "article": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "beach",
+              "nationalPark",
+              "shopping"
+            ]
           }
         }
       }

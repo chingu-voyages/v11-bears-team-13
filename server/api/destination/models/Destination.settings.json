@@ -7,12 +7,52 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "summary": {
+      "maxLength": 250,
+      "type": "string"
+    },
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "imageCollection": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "videoLink": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "lattitude": {
+      "type": "string"
+    },
+    "article": {
+      "type": "text"
+    },
+    "category": {
+      "enum": [
+        "beach",
+        "nationalPark",
+        "shopping"
+      ],
+      "type": "enumeration"
     }
   }
 }
